@@ -10,7 +10,13 @@ class Controller extends BaseController
 {
     public function getAll() 
     {
+        try {
             $all = Zipcode::all();
-            return response()->json($all);      
+            return response()->json($all); 
+        } catch (Throwable $t) {
+            var_dump($t->getMessage());
+            exit;
+        }
+             
     }
 }
