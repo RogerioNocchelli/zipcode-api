@@ -24,7 +24,7 @@ vim .env
 4 - Composer Install
 
 ```bash
-php composer.phar install
+composer install
 ```
 
 5 - Start docker:
