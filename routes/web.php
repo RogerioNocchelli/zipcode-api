@@ -22,6 +22,6 @@ $router->get('/', function () use ($router) {
 // Route::get('/api/all', [Controller::class, 'getAll']);
 
 $router->group(['prefix' => '/api'], function () use ($router) {
-    // $router->post('/save', 'Controller@getAll');
+    $router->post('/save', 'Controller@save');
     $router->get('/all', 'Controller@getAll');
 });
